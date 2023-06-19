@@ -1,0 +1,31 @@
+<div class="slpay-body">
+    <div class="slpay-header">
+        <h2>salary Payment Details</h2>
+        <button routerLink="/salary" type="button" >Cancel</button>
+    </div>
+
+    <div class="form-wrap">
+        <!-- salary transaction form -->
+        <form  class="form" [formGroup]="salaryForm" (ngSubmit)="onSubmit()">
+
+            <label for="employee">Employee*: </label>
+            <select formControlName="profile" id="employee" formControlName="empId">
+                <option [value]="null" disabled selected>Choose employee</option>
+                <option *ngFor="let emp of employees" [ngValue]="emp.empId">
+                 <div>
+                    {{ emp.nic }}
+                 </div>
+                 
+                </option>
+            </select>
+    
+            <label for="salary">salary Amount*: </label>
+            <input id="salary" type="number" formControlName="salaryAmount">
+
+            <span class="description">This salary will be proceed to current month.</span>
+            <button type="submit">Search</button>
+          </form>
+          
+    </div>
+    <span class="error">{{errorMessage}}</span>
+</div>

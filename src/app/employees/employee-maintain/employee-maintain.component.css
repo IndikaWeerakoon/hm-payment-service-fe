@@ -1,0 +1,59 @@
+.emp-body {
+    margin: 50px;
+    max-width: 800px;
+}
+
+.emp-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.emp-header h2 {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    color: #545252;
+}
+
+.emp-header button {
+    background-color: #2DAC76;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    height: 50px;
+    border-radius: 3px;
+}
+
+.form-wrap {
+    display: flex;
+    justify-content: left;
+    
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.form label {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.form input {
+    padding: 8px;
+    font-size: 15px;
+    margin: 0 0 8px;
+}
+
+.form button {
+    padding: 8px;
+    font-size: 15px;
+    background-color: #2DAC76;
+    color: #fff;
+    border: none;
+}

@@ -1,0 +1,57 @@
+<div class="slpay-body">
+    <div class="slpay-header">
+        <h2>salary Payment Details</h2>
+        <button routerLink="/salary/create" type="button" >+ Create Payment Transaction</button>
+    </div>
+
+    <div class="form-wrap">
+        <form [formGroup]="employeeFilter"  class="form" (ngSubmit)="onSubmit()">
+
+            <label for="employee">Employee: </label>
+            <select formControlName="profile" id="employee" formControlName="empId">
+                <option [value]="null" disabled>Choose employee</option>
+                <option *ngFor="let emp of employees" [ngValue]="emp.empId">
+                 <div>
+                    {{ emp.nic }}
+                 </div>
+                 
+                </option>
+            </select>
+
+            <label for="employee">Year: </label>
+            <select formControlName="profile" id="employee" formControlName="year"> 
+                <option [value]="null" disabled>Choose an year</option>
+                <option *ngFor="let year of yearRange(2018)" [value]="year">
+                 {{ year }}
+                </option>
+            </select>
+            <button type="submit">Search</button>
+          </form>
+          
+    </div>
+    <span style="color: red; font-family: sans-serif; font-size: 12px;">{{errorMessage}}</span>
+    <div>
+        <table>
+            <thead>
+              <tr class="tr">
+                <th>Emp NIC</th>
+                <th>Contact No</th>
+                <th>Month</th>
+                <th>Salary</th>
+                <th>Created Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let salary of salaryPayments" class="tr">
+                <td>{{ salary.employee.nic }}</td>
+                <td>{{ salary.employee.contactNo }}</td>
+                <td>{{ salary.month | titlecase }}</td>
+                <td>{{ salary.salery | currency:'LKR'}}</td>
+                <td>{{ salary.createdDate }}</td>
+                
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    
+</div>

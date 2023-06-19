@@ -1,0 +1,50 @@
+.emp-body {
+    margin: 50px;
+    width: 1000px;
+}
+
+.emp-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.emp-header h2 {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    color: #545252;
+}
+
+.emp-header button {
+    background-color: #2DAC76;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    height: 50px;
+}
+
+.emp-header button:hover {
+    cursor: pointer;
+}
+
+.emp-body table {
+    border-collapse: collapse;
+    width: 1000px;
+}
+
+.emp-body table th, td {
+    padding: 10px 20px;
+    text-align: left;
+    border: 1px solid #bab6b6;
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    max-width: 200px;
+}
+
+.emp-body table th {
+    color: #3caa7c;
+}

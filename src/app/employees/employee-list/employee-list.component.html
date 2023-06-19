@@ -1,0 +1,30 @@
+<div class="emp-body">
+    <div class="emp-header">
+        <h2>Employee Details</h2>
+        <button routerLink="/employee/create" type="button" >+ Add Employee</button>
+    </div>
+    
+    <table>
+        <thead>
+          <tr class="tr">
+            <th># ID</th>
+            <th>NIC</th>
+            <th>Contact No</th>
+            <th>Address</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emp of employees" class="tr">
+            <td>{{ emp.empId }}</td>
+            <td>{{ emp.nic }}</td>
+            <td>{{ emp.contactNo }}</td>
+            <td>{{ emp.address }}</td>
+            <td>
+              <button type="button" [routerLink]="['/employee',emp.empId]" [state]="emp">Edit</button>
+              <button type="button" (click)="deleteEmployee(emp.empId)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

@@ -1,0 +1,29 @@
+<div class="emp-body">
+    <div class="emp-header">
+        <h2>Create Employee Details</h2>
+        <button routerLink="/employee" type="button" >Cancel</button>
+    </div>
+
+    <div class="form-wrap">
+        <form [formGroup]="employeeForm" class="form" (ngSubmit)="onSubmit()">
+
+            <label for="empId">Employee ID: </label>
+            <input id="empId" type="text" [disabled]="true" [value]="empId">
+
+            <label for="nic">NIC: </label>
+            <input id="nic" type="text" formControlName="nic">
+          
+            <label for="contactNo">Contact No: </label>
+            <input id="contactNo" type="text" formControlName="contactNo">
+
+            <label for="address">Address: </label>
+            <input id="address" type="text" formControlName="address">
+
+            <label for="status">Employee Status: </label>
+            <input id="status" type="checkbox" formControlName="acceptTerms"  />
+
+            <button type="submit">Submit</button>
+            <span style="color: red;">{{errorMessage}}</span>
+          </form>
+    </div>
+</div>

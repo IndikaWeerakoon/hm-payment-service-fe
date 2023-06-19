@@ -1,0 +1,87 @@
+.slpay-body {
+    margin: 50px;
+    width: 1000px;
+}
+
+.slpay-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.slpay-header h2 {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    color: #545252;
+}
+
+.slpay-header button {
+    background-color: #2DAC76;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    height: 50px;
+}
+
+.slpay-header button:hover {
+    cursor: pointer;
+}
+
+.form-wrap {
+    display: flex;
+    justify-content: left;
+    
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+}
+
+.form label {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: #757373;
+    margin-right: 5px;
+}
+
+.form input, select {
+    padding: 8px;
+    font-size: 15px;
+    margin: 0 20px 0 0;
+    width: 200px;
+}
+
+.form button {
+    padding: 8px;
+    font-size: 15px;
+    background-color: #2DAC76;
+    color: #fff;
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 1000px;
+    margin-top: 30px;
+}
+
+table th, td {
+    padding: 10px 20px;
+    text-align: left;
+    border: 1px solid #bab6b6;
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    max-width: 200px;
+}
+
+table th {
+    color: #3caa7c;
+}
